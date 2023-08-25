@@ -4,6 +4,10 @@ const config = {
   framework: {
     name: '@storybook/web-components-webpack5',
     options: {}
+  },
+  docs: {
+    autodocs: 'tag',
+    defaultName: 'Documentation'
   }
 }
 

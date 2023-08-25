@@ -2,8 +2,19 @@
   "name": "gradient-js",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "ds:serve": "nx run design-system:serve",
+    "ds:build": "nx run design-system:build",
+    "ds:build-watch": "nx run design-system:build-watch",
+    "storybook:serve": "nx run design-system:storybook",
+    "storybook:build": "nx run design-system:build-storybook"
+  },
   "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tslib": "^2.3.0"
+  },
   "devDependencies": {
     "@nx/jest": "16.3.0",
     "@nx/js": "16.3.0",
@@ -29,10 +40,5 @@
   },
   "workspaces": [
     "packages/*"
-  ],
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tslib": "^2.3.0"
-  }
+  ]
 }
