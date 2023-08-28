@@ -1,5 +1,5 @@
 {
-  "name": "@undefined/design-system",
+  "name": "gradient-ds",
   "version": "0.0.1",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.js",
