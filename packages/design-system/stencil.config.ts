@@ -6,10 +6,10 @@ export const config: Config = {
   namespace: 'design-system',
   taskQueue: 'async',
   sourceMap: true,
-
   extras: {
     experimentalImportInjection: true
   },
+  globalStyle: 'src/global/global.css',
   plugins: [sass()],
   outputTargets: [
     {
