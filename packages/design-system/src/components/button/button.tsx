@@ -1,4 +1,5 @@
 import { Component, Prop, h } from '@stencil/core'
+import { Host } from '@stencil/core/internal'
 
 @Component({
   tag: 'gradient-button',
@@ -23,12 +24,15 @@ export class Button {
 
   render(): any {
     return (
-      <button
-        class={`button button-${this.size} button-${this.theme}-theme`}
-        style={{ '--fromColor': this.fromColor, '--toColor': this.toColor }}
+      <Host
+        style={{
+          '--gradient': `linear-gradient(165deg, ${this.fromColor}, ${this.toColor}`
+        }}
       >
-        <span class="button__label">{this.label}</span>
-      </button>
+        <button class={`button button-${this.size} button-${this.theme}-theme`}>
+          <span class="button__label">{this.label}</span>
+        </button>
+      </Host>
     )
   }
 }
