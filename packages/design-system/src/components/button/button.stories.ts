@@ -2,8 +2,8 @@ const Template = (args) =>
   `<gradient-button
     label=${args.label}
     size=${args.size}
-    fromColor=${args.fromColor}
-    toColor=${args.toColor}
+    from-color=${args.fromColor}
+    to-color=${args.toColor}
     theme=${args.theme}>
   </gradient-button>`
 
