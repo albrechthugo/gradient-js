@@ -11,6 +11,7 @@
   "unpkg": "./dist/design-system/design-system.js",
   "files": [
     "dist/",
-    "loader/"
+    "loader/",
+    "react/"
   ]
 }
