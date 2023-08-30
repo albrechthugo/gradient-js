@@ -2,6 +2,8 @@ import { Config } from '@stencil/core'
 
 import { sass } from '@stencil/sass'
 
+import { reactOutputTarget } from '@stencil/react-output-target'
+
 export const config: Config = {
   namespace: 'design-system',
   taskQueue: 'async',
@@ -34,6 +36,11 @@ export const config: Config = {
       type: 'dist-custom-elements',
       customElementsExportBehavior: 'auto-define-custom-elements',
       includeGlobalScripts: false
-    }
+    },
+    reactOutputTarget({
+      componentCorePackage: 'gradient-ds',
+      proxiesFile: 'react/components/generated/index.ts',
+      includeDefineCustomElements: true
+    })
   ]
 }
