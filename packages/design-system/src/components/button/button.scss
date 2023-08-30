@@ -12,7 +12,7 @@
   font-family: var(--default-font);
 
   background-clip: padding-box;
-  background-image: linear-gradient(165deg, var(--fromColor), var(--toColor));
+  background-image: var(--gradient);
 
   &:active {
     opacity: 90%;
