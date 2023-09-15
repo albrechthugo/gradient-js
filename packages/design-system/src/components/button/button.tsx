@@ -4,7 +4,7 @@ import { Host } from '@stencil/core/internal'
 @Component({
   tag: 'gradient-button',
   styleUrl: 'button.scss',
-  shadow: true
+  scoped: true
 })
 export class Button {
   @Prop()

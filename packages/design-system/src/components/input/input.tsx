@@ -3,7 +3,7 @@ import { Component, Host, Prop, h } from '@stencil/core'
 @Component({
   tag: 'gradient-input',
   styleUrl: 'input.scss',
-  shadow: true
+  scoped: true
 })
 export class Input {
   @Prop()
