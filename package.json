@@ -6,6 +6,7 @@
     "ds:serve": "nx run design-system:serve",
     "ds:build": "nx run design-system:build",
     "ds:build-watch": "nx run design-system:build-watch",
+    "ds:publish": "npm run ds:build && cd dist/packages/design-system && npm publish",
     "storybook:serve": "nx run design-system:storybook",
     "storybook:build": "nx run design-system:build-storybook"
   },

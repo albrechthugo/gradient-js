@@ -13,6 +13,14 @@ export namespace Components {
         "theme": 'dark' | 'light';
         "toColor": string;
     }
+    interface GradientInput {
+        "fromColor": string;
+        "invalid"?: boolean;
+        "label": string;
+        "placeholder": string;
+        "toColor": string;
+        "variant"?: 'lined' | 'outlined';
+    }
 }
 declare global {
     interface HTMLGradientButtonElement extends Components.GradientButton, HTMLStencilElement {
@@ -21,8 +29,15 @@ declare global {
         prototype: HTMLGradientButtonElement;
         new (): HTMLGradientButtonElement;
     };
+    interface HTMLGradientInputElement extends Components.GradientInput, HTMLStencilElement {
+    }
+    var HTMLGradientInputElement: {
+        prototype: HTMLGradientInputElement;
+        new (): HTMLGradientInputElement;
+    };
     interface HTMLElementTagNameMap {
         "gradient-button": HTMLGradientButtonElement;
+        "gradient-input": HTMLGradientInputElement;
     }
 }
 declare namespace LocalJSX {
@@ -33,8 +48,17 @@ declare namespace LocalJSX {
         "theme"?: 'dark' | 'light';
         "toColor"?: string;
     }
+    interface GradientInput {
+        "fromColor"?: string;
+        "invalid"?: boolean;
+        "label"?: string;
+        "placeholder"?: string;
+        "toColor"?: string;
+        "variant"?: 'lined' | 'outlined';
+    }
     interface IntrinsicElements {
         "gradient-button": GradientButton;
+        "gradient-input": GradientInput;
     }
 }
 export { LocalJSX as JSX };
@@ -42,6 +66,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "gradient-button": LocalJSX.GradientButton & JSXBase.HTMLAttributes<HTMLGradientButtonElement>;
+            "gradient-input": LocalJSX.GradientInput & JSXBase.HTMLAttributes<HTMLGradientInputElement>;
         }
     }
 }

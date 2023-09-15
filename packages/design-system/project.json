@@ -27,6 +27,7 @@
         "projectType": "library",
         "tsConfig": "packages/design-system/tsconfig.lib.json",
         "configPath": "packages/design-system/stencil.config.ts",
+        "packageJsonPath": "packages/design-system/package.json",
         "outputPath": "dist/packages/design-system"
       },
       "configurations": {
